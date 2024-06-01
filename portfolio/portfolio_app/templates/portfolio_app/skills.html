@@ -1,0 +1,16 @@
+<!-- templates/portfolio_app/skills.html -->
+{% extends 'portfolio_app/base.html' %}
+
+{% block content %}
+<section>
+    <h1>Skills</h1>
+    <div>
+        {% for skill in skills %}
+            <div class="skills">
+                <h3>{{ skill.title }}</h3>
+                <p>{{ skill.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

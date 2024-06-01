@@ -1,0 +1,33 @@
+<!-- templates/portfolio_app/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'portfolio_app/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="nav-left">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'skills' %}">Skills</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'certificates' %}">Certificates</a>
+                <a href="{% url 'articles' %}">Academic</a>
+                <a href="{% url 'download_cv' %}">CV</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+            <div class="nav-right">
+                <img src="{% static 'portfolio_app/images/your_image.jpg' %}" alt="Your Image">
+            </div>
+        </div>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>

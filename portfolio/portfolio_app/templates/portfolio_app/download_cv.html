@@ -1,0 +1,9 @@
+{% extends 'portfolio_app/base.html' %}
+
+{% block content %}
+{% load static %}
+<section>
+    <h1>Here is below you can download my CV file</h1>
+    <a href="{% static 'portfolio_app/files/your_cv.pdf' %}" download>Download CV</a>
+</section>
+{% endblock %}

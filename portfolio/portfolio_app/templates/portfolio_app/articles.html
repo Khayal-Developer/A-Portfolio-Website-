@@ -1,0 +1,24 @@
+<!-- templates/portfolio_app/articles.html -->
+{% extends 'portfolio_app/base.html' %}
+
+{% block content %}
+<section>
+    <h1>Articles & Thesis</h1>
+    <div>
+        {% for article in articles %}
+            <div class="article">
+                <h3>{{ article.title }}</h3>
+                <p>{{ article.description }}</p>
+                <p>Author: {{ article.author }}</p>
+                <p>Date published: {{ article.date_published }}</p>
+                {% if article.article_link %}
+                    <a href="{{ article.article_link }}">View Article</a>
+                {% endif %}
+                {% if article.article_file %}
+                    <a href="{{ article.article_file.url }}">Download Article File</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
