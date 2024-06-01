@@ -1,2 +1,2 @@
-This project (A Portfolio Website) is build by using Python with Django. Besides, HTML, CSS. 
-Some files are deleted because of they have sensitive information.
+This project (A Portfolio Website) is built by using Python with Django, HTML, and CSS. 
+Some files are not included because they have sensitive information.
